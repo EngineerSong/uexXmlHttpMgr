@@ -100,6 +100,9 @@ typedef NS_ENUM(NSInteger,uexXmlHttpPOSTRequestConstructMode){
         self.status = uexXmlHttpRequestStatusSuccess;
         self.responseObject = responseObject;
         [self.euexObj request:self taskCompleteWithError:nil];
+        
+        [[NSURLCache sharedURLCache] removeCachedResponseForDataTask:task];
+        [self removeLocalCache];
     };
     void (^handleFailureBlock)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) = ^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
         if ([task.response isKindOfClass:[NSHTTPURLResponse class]]) {
@@ -107,6 +110,9 @@ typedef NS_ENUM(NSInteger,uexXmlHttpPOSTRequestConstructMode){
         }
         self.status = uexXmlHttpRequestStatusFailed;
         [self.euexObj request:self taskCompleteWithError:error];
+        
+        [[NSURLCache sharedURLCache] removeCachedResponseForDataTask:task];
+        [self removeLocalCache];
     };
     
     

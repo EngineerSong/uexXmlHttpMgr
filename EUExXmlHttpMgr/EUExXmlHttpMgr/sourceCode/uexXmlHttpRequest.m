@@ -131,5 +131,19 @@
     [self setupAuthentication];
 }
 
+#pragma mark - 删除沙盒中cache内的文件
+- (void)removeLocalCache
+{
+    NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *contents = [fileManager contentsOfDirectoryAtPath:cachePath error:NULL];
+    NSEnumerator *e = [contents objectEnumerator];
+    NSString *filename;
+    while ((filename = [e nextObject])) {
+        [fileManager removeItemAtPath:[cachePath stringByAppendingPathComponent:filename] error:NULL];
+    }
+}
+
+
 
 @end

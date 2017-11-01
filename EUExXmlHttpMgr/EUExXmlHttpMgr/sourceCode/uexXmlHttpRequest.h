@@ -72,6 +72,8 @@ typedef NS_ENUM(NSInteger,uexXmlHttpRequestStatus){
 - (void)close;
 
 
+#pragma mark - 删除沙盒中cache内的文件
+- (void)removeLocalCache;
 
 
 #pragma mark - subclass MUST override the methods below!

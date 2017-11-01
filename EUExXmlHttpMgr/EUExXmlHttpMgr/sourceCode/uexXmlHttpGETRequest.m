@@ -43,6 +43,9 @@
                   self.status = uexXmlHttpRequestStatusSuccess;
                   self.responseObject = responseObject;
                   [self.euexObj request:self taskCompleteWithError:nil];
+                  
+                  [[NSURLCache sharedURLCache] removeCachedResponseForDataTask:task];
+                  [self removeLocalCache];
               }
               failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                   if ([task.response isKindOfClass:[NSHTTPURLResponse class]]) {
@@ -50,6 +53,9 @@
                   }
                   self.status = uexXmlHttpRequestStatusFailed;
                   [self.euexObj request:self taskCompleteWithError:error];
+                  
+                  [[NSURLCache sharedURLCache] removeCachedResponseForDataTask:task];
+                  [self removeLocalCache];
               }];
 }
 

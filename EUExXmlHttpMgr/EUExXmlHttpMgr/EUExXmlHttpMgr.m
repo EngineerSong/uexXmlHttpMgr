@@ -81,6 +81,19 @@ static inline NSString * newID(){
 //    [request send];
 //}
 
+#pragma mark - 删除沙盒中cache内的文件
++ (void)removeLocalCache
+{
+    NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *contents = [fileManager contentsOfDirectoryAtPath:cachePath error:NULL];
+    NSEnumerator *e = [contents objectEnumerator];
+    NSString *filename;
+    while ((filename = [e nextObject])) {
+        [fileManager removeItemAtPath:[cachePath stringByAppendingPathComponent:filename] error:NULL];
+    }
+}
+
 #pragma mark - AppDelegate
 + (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -92,6 +105,8 @@ static inline NSString * newID(){
     
     //清除缓存
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    [EUExXmlHttpMgr removeLocalCache];
+    
     return YES;
 }
 
