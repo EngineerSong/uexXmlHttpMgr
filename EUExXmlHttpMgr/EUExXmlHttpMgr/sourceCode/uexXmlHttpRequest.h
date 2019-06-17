@@ -25,6 +25,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "uexXmlHttpAuthentication.h"
 #import <AppCanKit/AppCanKit.h>
+#import "AFJSONResponseSerializerWithData.h"
 
 
 

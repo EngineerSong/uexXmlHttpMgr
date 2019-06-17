@@ -19,6 +19,7 @@
 		42F7EF6D1CEEE4A4009F14AF /* uexXmlHttpPOSTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F7EF6C1CEEE4A4009F14AF /* uexXmlHttpPOSTRequest.m */; };
 		42F7EF701CEEE4D3009F14AF /* uexXmlHttpGETRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F7EF6F1CEEE4D3009F14AF /* uexXmlHttpGETRequest.m */; };
 		42F7EF7E1CEEE9F9009F14AF /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F7EF7D1CEEE9F9009F14AF /* AFNetworking.framework */; };
+		9E4BBBAC22B3A190008E2C6D /* AFJSONResponseSerializerWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4BBBAB22B3A190008E2C6D /* AFJSONResponseSerializerWithData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		42F7EF6E1CEEE4D3009F14AF /* uexXmlHttpGETRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uexXmlHttpGETRequest.h; sourceTree = "<group>"; };
 		42F7EF6F1CEEE4D3009F14AF /* uexXmlHttpGETRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uexXmlHttpGETRequest.m; sourceTree = "<group>"; };
 		42F7EF7D1CEEE9F9009F14AF /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
+		9E4BBBAA22B3A190008E2C6D /* AFJSONResponseSerializerWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONResponseSerializerWithData.h; sourceTree = "<group>"; };
+		9E4BBBAB22B3A190008E2C6D /* AFJSONResponseSerializerWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONResponseSerializerWithData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 				42C67DD41CF2CF5400D2DF23 /* uexXmlHttpFormFile.m */,
 				42F7EF681CEEDCA8009F14AF /* uexXmlHttpAuthentication.h */,
 				42F7EF691CEEDCA8009F14AF /* uexXmlHttpAuthentication.m */,
+				9E4BBBAA22B3A190008E2C6D /* AFJSONResponseSerializerWithData.h */,
+				9E4BBBAB22B3A190008E2C6D /* AFJSONResponseSerializerWithData.m */,
 			);
 			path = sourceCode;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F7EF4E1CEEC748009F14AF /* EUExXmlHttpMgr.m in Sources */,
+				9E4BBBAC22B3A190008E2C6D /* AFJSONResponseSerializerWithData.m in Sources */,
 				42F7EF571CEECA04009F14AF /* uexXmlHttpHelper.m in Sources */,
 				42F7EF6A1CEEDCA8009F14AF /* uexXmlHttpAuthentication.m in Sources */,
 				42C67DD51CF2CF5400D2DF23 /* uexXmlHttpFormFile.m in Sources */,

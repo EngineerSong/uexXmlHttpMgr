@@ -64,7 +64,7 @@
         
         AFHTTPSessionManager *mgr = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:requestConfiguration];
         [mgr setRequestSerializer:requestSerializer];
-        [mgr setResponseSerializer:[AFHTTPResponseSerializer serializer]];
+        [mgr setResponseSerializer:[AFJSONResponseSerializerWithData serializer]];
         @weakify(self);
         [mgr setSessionDidBecomeInvalidBlock:^(NSURLSession * _Nonnull session, NSError * _Nonnull error) {
             @strongify(self);

@@ -359,7 +359,7 @@ static inline NSString * newID(){
     [responseDict setValue:response.allHeaderFields forKey:@"responseHeaders"];
     [responseDict setValue:@(statusCode) forKey:@"responseStatusCode"];
     [responseDict setValue:[NSHTTPURLResponse localizedStringForStatusCode:statusCode] forKey:@"responseStatusMessage"];
-    [responseDict setValue:error.localizedDescription forKey:@"responseError"];
+    [responseDict setValue:error.userInfo[JSONResponseSerializerWithDataKey]?error.userInfo[JSONResponseSerializerWithDataKey]:error.localizedDescription forKey:@"responseError"];
     
     ACLogDebug(@"->uexXmlHttpMgr request %@ complete! \n response:%@ \n responseObject:%@ \n error:%@",identifier,responseDict,result,error.localizedDescription);
     [request.resultCB executeWithArguments:ACArgsPack(@(request.status),result,@(statusCode),responseDict)];
