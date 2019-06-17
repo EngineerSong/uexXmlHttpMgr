@@ -10,6 +10,6 @@
 static NSString * const JSONResponseSerializerWithDataKey = @"body";
 static NSString * const JSONResponseSerializerWithCodeKey = @"statusCode";
 
-@interface AFJSONResponseSerializerWithData : AFJSONResponseSerializer
+@interface AFJSONResponseSerializerWithData : AFHTTPResponseSerializer
 
 @end

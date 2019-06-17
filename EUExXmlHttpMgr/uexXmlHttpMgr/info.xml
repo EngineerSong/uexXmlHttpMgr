@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <uexplugins>
-    <plugin uexName="uexXmlHttpMgr" version="4.0.4" build="4">
-        <info>4:请求失败回调中增加服务器响应体</info>
+    <plugin uexName="uexXmlHttpMgr" version="4.0.5" build="5">
+        <info>5:AFJSONResponseSerializer变更回AFHTTPResponseSerializer</info>
+        <build>4:请求失败回调中增加服务器响应体</build>
         <build>3:实时清除缓存</build>
         <build>2:取消网络请求本地缓存</build>
         <build>1:支持开启证书校验</build>
